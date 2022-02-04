@@ -21,12 +21,18 @@ public class Q2 {
         
         System.out.print("Enter firstname lastname age: ");
         
-        String firstname = scanner.next();
-        String lastname = scanner.next();
-        int age = scanner.nextInt();
+        String input = scanner.nextLine();
         
-        firstname = firstname.trim();
-        lastname = lastname.trim();
+        input = input.trim();
+        
+        int space = input.indexOf(" ");
+        String firstname = input.substring(0, space).trim();
+        
+        int space2 = input.indexOf(" ", space + 1);
+        String lastname = input.substring(space, space2).trim();
+        
+        String age = input.substring(space2).trim();
+        
         
         System.out.println(lastname + ", " + firstname + " is " + age + " years old.");
         
