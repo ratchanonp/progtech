@@ -35,7 +35,7 @@ public class Student {
     }
     
     public void setName(String name) {
-        name = name;
+        this.name = name;
     }
     
     public Calendar getBD() {
