@@ -10,8 +10,8 @@ package lab4q3s6434480323;
  * @author ratchanon
  */
 public class Point {
-    public double x;
-    public double y;
+    private double x;
+    private double y;
     
     public Point(double x, double y) {
         this.x = x;
