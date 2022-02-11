@@ -38,16 +38,22 @@ public class Q1 {
                 System.out.println("Sum : " + (n1 + n2 + n3));
                 break;
             case 2:
-                System.out.println("Enter a, b,c for ax^2+bx+c=0 :");
+                System.out.println("Enter a, b, c for ax^2+bx+c=0 :");
                 
                 double a = scanner.nextDouble();
                 double b = scanner.nextDouble();
                 double c = scanner.nextDouble();
                 
-                double x1 = (-b + Math.sqrt(Math.pow(b, 2) - (4 * a *c))) / (2 * a);
-                double x2 = (-b - Math.sqrt(Math.pow(b, 2) - (4 * a *c))) / (2 * a);
+                if (a != 0 && (Math.pow(b, 2) - (4 * a * c)) >= 0){
+                    double x1 = (-b + Math.sqrt(Math.pow(b, 2) - (4 * a *c))) / (2 * a);
+                    double x2 = (-b - Math.sqrt(Math.pow(b, 2) - (4 * a *c))) / (2 * a);
+
+                    System.out.println("Two roots: " + x1 + ", " + x2);
+                } else {
+                    System.out.println("No solution");
+                }
                 
-                System.out.println("Two roots: " + x1 + ", " + x2);
+                
                 break;
             case 3:
                 System.out.println("Enter the length of 2 sides of the rectangle:");
