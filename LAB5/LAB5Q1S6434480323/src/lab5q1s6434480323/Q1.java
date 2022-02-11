@@ -68,8 +68,4 @@ public class Q1 {
                 
         }
     }
-    
-    private static void quadratic(double a, double b, double c){
-       
-    }
 }
