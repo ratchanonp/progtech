@@ -1,0 +1,80 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab5q2s6434480323;
+
+/**
+ *
+ * @author ratchanon
+ */
+public class Course {
+    private String courseName;
+    private int courseId;
+    private int credit = 3;
+    
+    // Constructor 2 value 
+    public Course(String courseName, int courseId){
+        this.courseName = courseName;
+        this.courseId = courseId;
+    }
+    
+    // Constructor 3 value
+    public Course(String courseName, int courseId, int credit){
+        this.courseName = courseName;
+        this.courseId = courseId;
+        this.credit = credit;
+    }
+    
+    public void setCid(int courseId){
+        this.courseId = courseId;
+    }
+    
+    public void setCname(String courseName){
+        this.courseName = courseName;
+    }
+    
+    public void setCredit(int credit){
+        this.credit = credit;
+    }
+    
+    public String getCname(){
+        return this.courseName;
+    }
+    
+    public int getCid(){
+        return this.courseId;
+    }
+    
+    public int getCredit(){
+        return this.credit;
+    }
+    
+    public boolean equals(Course other){
+        return this.courseId == other.courseId &&
+               this.courseName.equals(other.courseName) && 
+               this.credit == other.credit;
+    }
+    
+    public int compare(Course other){
+        if (this.equals(other)) return 0;
+        
+        boolean isSameCourseId = this.courseId == other.courseId;
+        boolean isSameCourseName = this.courseName.equals(other.courseName);
+        boolean hasSameCredit = this.credit == other.credit;
+        
+        if(!isSameCourseId && isSameCourseName && hasSameCredit) return 1;
+        else if(isSameCourseId && !isSameCourseName && hasSameCredit) return 2;
+        else if(isSameCourseId && isSameCourseName && !hasSameCredit) return 3;
+        else if(isSameCourseId && !isSameCourseName && !hasSameCredit) return 4;
+        else if(!isSameCourseId && isSameCourseName && !hasSameCredit) return 5;
+        else if(!isSameCourseId && !isSameCourseName && hasSameCredit) return 6;
+        else return 7;
+    }
+    
+    @Override
+    public String toString(){
+        return this.courseId + " " +  this.courseName + " " + this.credit;
+    }   
+}
