@@ -10,9 +10,10 @@ package lab5q2s6434480323;
  * @author ratchanon
  */
 public class Course {
-    private String courseName;
-    private int courseId;
-    private int credit = 3;
+    // Instance Variable
+    private String courseName;  // ชื่อวิชา
+    private int courseId;       // รหัสวิชา
+    private int credit = 3;     // จำนวนหน่วยกิต (Defualt : 3)
     
     // Constructor 2 value 
     public Course(String courseName, int courseId){
