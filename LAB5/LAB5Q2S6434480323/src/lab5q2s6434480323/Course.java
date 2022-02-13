@@ -76,5 +76,9 @@ public class Course {
     @Override
     public String toString(){
         return this.courseId + " " +  this.courseName + " " + this.credit;
-    }   
+    }
+    
+    public int sumCredit(Course other){
+        return this.credit + other.credit;
+    }
 }
