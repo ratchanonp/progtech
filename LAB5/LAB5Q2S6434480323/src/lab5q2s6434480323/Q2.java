@@ -39,6 +39,7 @@ public class Q2 {
         // Course 2
         System.out.print("Enter course ID, course name: ");
         input = scanner.nextLine().split(" ");
+        
         courseId = Integer.parseInt(input[0]);
         courseName = String.join(" ", Arrays.copyOfRange(input, 1, input.length));
         
@@ -47,7 +48,7 @@ public class Q2 {
         // Check is same course
        if (course1.equals(course2)){
            System.out.println("Same course");
-           System.out.print("Enter course ID, course name: ");
+           System.out.print("Enter course ID, course name, credit: ");
            
            input = scanner.nextLine().split(" ");
         
