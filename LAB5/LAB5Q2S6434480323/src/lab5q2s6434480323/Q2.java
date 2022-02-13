@@ -23,14 +23,14 @@ public class Q2 {
         
         String[] input;
         String courseName;
-        int courseId;
+        String courseId;
         int credit;
         
         // Course 1
         System.out.print("Enter course ID, course name, credit: ");
         input = scanner.nextLine().split(" ");
         
-        courseId = Integer.parseInt(input[0]);
+        courseId = input[0];
         courseName = String.join(" ", Arrays.copyOfRange(input, 1, input.length - 1));
         credit = Integer.parseInt(input[input.length - 1]);
         
@@ -40,7 +40,7 @@ public class Q2 {
         System.out.print("Enter course ID, course name: ");
         input = scanner.nextLine().split(" ");
         
-        courseId = Integer.parseInt(input[0]);
+        courseId = input[0];
         courseName = String.join(" ", Arrays.copyOfRange(input, 1, input.length));
         
         Course course2 = new Course(courseName, courseId);
@@ -52,7 +52,7 @@ public class Q2 {
            
            input = scanner.nextLine().split(" ");
         
-           courseId = Integer.parseInt(input[0]);
+           courseId = input[0];
            courseName = String.join(" ", Arrays.copyOfRange(input, 1, input.length - 1));
            credit = Integer.parseInt(input[input.length - 1]);
            

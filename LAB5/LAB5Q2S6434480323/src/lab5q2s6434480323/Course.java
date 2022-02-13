@@ -12,23 +12,23 @@ package lab5q2s6434480323;
 public class Course {
     // Instance Variable
     private String courseName;  // ชื่อวิชา
-    private int courseId;       // รหัสวิชา
+    private String courseId;       // รหัสวิชา
     private int credit = 3;     // จำนวนหน่วยกิต (Defualt : 3)
     
     // Constructor 2 value 
-    public Course(String courseName, int courseId){
+    public Course(String courseName, String courseId){
         this.courseName = courseName;
         this.courseId = courseId;
     }
     
     // Constructor 3 value
-    public Course(String courseName, int courseId, int credit){
+    public Course(String courseName, String courseId, int credit){
         this.courseName = courseName;
         this.courseId = courseId;
         this.credit = credit;
     }
     
-    public void setCid(int courseId){
+    public void setCid(String courseId){
         this.courseId = courseId;
     }
     
@@ -44,7 +44,7 @@ public class Course {
         return this.courseName;
     }
     
-    public int getCid(){
+    public String getCid(){
         return this.courseId;
     }
     
@@ -53,7 +53,7 @@ public class Course {
     }
     
     public boolean equals(Course other){
-        return this.courseId == other.courseId &&
+        return this.courseId.equals(other.courseId) &&
                this.courseName.equals(other.courseName) && 
                this.credit == other.credit;
     }
@@ -61,7 +61,7 @@ public class Course {
     public int compare(Course other){
         if (this.equals(other)) return 0;
         
-        boolean isSameCourseId = this.courseId == other.courseId;
+        boolean isSameCourseId = this.courseId.equals(other.courseId);
         boolean isSameCourseName = this.courseName.equals(other.courseName);
         boolean hasSameCredit = this.credit == other.credit;
         
