@@ -18,20 +18,20 @@ public class Q2 {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.print("Enter a, b, c : ");
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         int c = scanner.nextInt();
-        
+
         int sum = 0;
-        
-        for(int i=a;i<=b;i++){
-            for(int j=i;j<=c*i;j++){
+
+        for (int i = a; i <= b; i++) {
+            for (int j = i; j <= c * i; j++) {
                 sum += i * i + j;
             }
         }
         System.out.println("Answer = " + sum);
     }
-    
+
 }
