@@ -23,12 +23,20 @@ public class Q3 {
             File scoreFile = new File("src/score.txt");
             Scanner scoreReader = new Scanner(scoreFile);
             
-            double score = scoreReader.nextDouble();
-            
-            double max = score;
-            double min = score;
-            double sum = score;
+            double score;
+            double max = 0;
+            double min = 0;
+            double sum = 0;
             int count = 1;
+            
+            // Check Have data in file
+            if (scoreReader.hasNextLine()){
+                score = scoreReader.nextDouble();
+                max = score;
+                min = score;
+                sum = score;
+            }
+            
             
             while (scoreReader.hasNextLine()) {
                 score = scoreReader.nextDouble();
