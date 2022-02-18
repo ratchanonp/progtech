@@ -88,32 +88,32 @@ public class Student {
     /*
        LAB6 Add
      */
-    public String getDigit(int start, int end) {
-        return this.id.substring(start, end + 1);
+    public int getDigit(int start, int end) {
+        return Integer.parseInt(this.id.substring(start, end + 1));
     }
 
-    public String getFacultyCode() {
+    public int getFacultyCode() {
         return getDigit(8, 9);
     }
 
-    public String getLevelCode() {
+    public int getLevelCode() {
         return getDigit(2, 2);
     }
 
-    public String getYear() {
+    public int getYear() {
         return getDigit(0, 1);
     }
 
     public boolean sameYear(Student other) {
-        return this.getYear().equals(other.getYear());
+        return this.getYear() == other.getYear();
     }
 
     public boolean sameLevel(Student other) {
-        return this.getLevelCode().equals(other.getLevelCode());
+        return this.getLevelCode() == other.getLevelCode();
     }
 
     public boolean sameFaculty(Student other) {
-        return this.getFacultyCode().equals(other.getFacultyCode());
+        return this.getFacultyCode() == other.getFacultyCode();
     }
 
     // Testing
