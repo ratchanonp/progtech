@@ -38,3 +38,9 @@ public class Q4 {
     }
     
 }
+
+/*
+    Test Case
+    6431254123 Tim Tam
+    6431204121 Bom Bam
+*/
