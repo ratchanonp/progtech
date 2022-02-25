@@ -67,14 +67,12 @@ public class Q3 {
                 courseId = scanner.next();
             }
         }
-        
-        
-        
+
         /* Transcript */
-        for(Student student: listStudent){
+        for (Student student : listStudent) {
             System.out.println("------ Transcript ------");
             System.out.println("  " + student.toStringIdName());
-            student.registerCourse().forEach((subject) -> System.out.println(subject));            
+            student.registerCourse().forEach((subject) -> System.out.println(subject));
             System.out.println("  GPA: " + student.calGPA());
         }
     }
@@ -88,6 +86,7 @@ public class Q3 {
         return null;
     }
 }
+
 /*
 6341234423 Tana Anat
 6331234423 Anat Tana
