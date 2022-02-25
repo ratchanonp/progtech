@@ -55,7 +55,7 @@ public class Q3 {
         /* Student Grade report */
         // Loop Through Every Student
         for (int i = 0; i < 3; i++) {
-            System.out.println(listStudent[i].getName() + "grade report:");
+            System.out.println(listStudent[i].getName() + " grade report:");
 
             courseId = scanner.next();
             while (!courseId.equals("X")) {
