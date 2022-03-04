@@ -36,11 +36,11 @@ public class Mtx {
     }
 
     public boolean equalSize(Mtx that) {
-        return this.row == that.getRow() && this.column == that.getColumn();
+        return this.row == that.row && this.column == that.column;
     }
 
     public boolean compatible(Mtx that) {
-        return this.column == that.getRow();
+        return this.column == that.row;
     }
 
     public int[][] add(Mtx that) {
@@ -48,7 +48,7 @@ public class Mtx {
 
         for (int i = 0; i < this.row; i++) {
             for (int j = 0; j < this.column; j++) {
-                result[i][j] = this.Matrix[i][j] + that.getMatrix()[i][j];
+                result[i][j] = this.Matrix[i][j] + that.Matrix[i][j];
             }
         }
 
@@ -56,11 +56,11 @@ public class Mtx {
     }
 
     public int[][] mul(Mtx that) {
-        int[][] result = new int[this.row][that.getColumn()];
+        int[][] result = new int[this.row][that.column];
         for (int i = 0; i < this.row; i++) {
-            for (int j = 0; j < that.getColumn(); j++) {
-                for (int k = 0; k < that.getRow(); k++) {
-                    result[i][j] += this.Matrix[i][k] * that.getMatrix()[k][j];
+            for (int j = 0; j < that.column; j++) {
+                for (int k = 0; k < that.row; k++) {
+                    result[i][j] += this.Matrix[i][k] * that.Matrix[k][j];
                 }
             }
         }
