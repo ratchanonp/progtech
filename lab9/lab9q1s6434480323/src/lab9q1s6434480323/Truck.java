@@ -29,7 +29,7 @@ public class Truck extends Car {
     @Override
     public void drive(double distance){
         double additionalGas;
-        double useGas = distance / super.getEfficiency();
+        double useGas = distance / this.getEfficiency();
         
         if(this.weight < 1){
             additionalGas = 0;
