@@ -16,4 +16,13 @@ public class GoldCustomer extends Customer {
         super(name, tel);
         this.discount = discount;
     }
+    
+    public double getDiscount() {
+        return this.discount;
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString() + " discount : " + this.discount;
+    }
 }

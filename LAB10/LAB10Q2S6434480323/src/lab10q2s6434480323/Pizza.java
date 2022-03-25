@@ -19,4 +19,13 @@ public class Pizza {
         this.name = name;
         this.price = price;
     }
+    
+    public double getPrice() {
+        return this.price;
+    }
+    
+    @Override
+    public String toString() {
+        return this.name + " price : " + this.price;
+    }
 }

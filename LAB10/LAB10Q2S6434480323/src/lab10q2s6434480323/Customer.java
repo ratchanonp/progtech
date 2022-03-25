@@ -17,4 +17,9 @@ public class Customer {
         this.name = name;
         this.tel = tel;
     }
+    
+    @Override
+    public String toString() {
+        return this.name + " tel : " + this.tel;
+    }
 }

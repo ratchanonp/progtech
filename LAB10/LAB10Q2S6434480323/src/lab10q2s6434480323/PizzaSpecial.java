@@ -16,4 +16,9 @@ public class PizzaSpecial extends Pizza {
         super(name, price);
         this.special = special;
     }
+    
+    @Override
+    public String toString(){
+        return super.toString() + " special : " + this.special;
+    }
 }
