@@ -53,8 +53,8 @@ public class Order {
             total += pizza.getPrice();
         }
 
-        if (c.getClass().getSimpleName().equals("GoldCustomer")) {
-            total -= (((GoldCustomer) c).getDiscount() / 100) * total;
+        if (c instanceof GoldCustomer g) {
+            total -= (g.getDiscount() / 100) * total;
         }
 
         return total;
