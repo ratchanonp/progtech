@@ -87,7 +87,7 @@ public class FileMatch {
                 r.readInt();
                 totalRecord++;
 
-                r.skipBytes(30 * 2);
+                r.skipBytes(30 * 2); // Skip name
 
                 balance += r.readDouble();
                 if (r.readInt() == 0) {

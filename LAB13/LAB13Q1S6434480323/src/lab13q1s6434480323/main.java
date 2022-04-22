@@ -23,21 +23,17 @@ public class main {
 
         Scanner scanner = new Scanner(System.in);
 
-        try {
-            PrintWriter output = new PrintWriter(filePath);
+        try ( PrintWriter output = new PrintWriter(filePath)) {
             String line = scanner.nextLine();
             while (!line.equals("quit")) {
                 output.println(line);
                 line = scanner.nextLine();
             }
-
-            output.close();
-
-            fileReading(filePath);
-
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+
+        fileReading(filePath);
 
     }
 
@@ -46,10 +42,8 @@ public class main {
         int words = 0;
         int lines = 0;
 
-        try {
-            File file = new File(path);
-            Scanner reader = new Scanner(file);
-
+        File file = new File(path);
+        try ( Scanner reader = new Scanner(file)) {
             while (reader.hasNextLine()) {
                 String line = reader.nextLine();
                 words += line.split(" ").length;
@@ -57,13 +51,14 @@ public class main {
                 lines++;
 
             }
-
-            System.out.println("Total characters : " + characters);
-            System.out.println("Total words : " + words);
-            System.out.println("Total lines : " + lines);
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        System.out.println("Total characters : " + characters);
+        System.out.println("Total words : " + words);
+        System.out.println("Total lines : " + lines);
+
     }
 
 }

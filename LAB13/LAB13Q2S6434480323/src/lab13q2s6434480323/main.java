@@ -28,10 +28,9 @@ public class main {
         System.out.print("Enter a sentence: ");
         inputString = scanner.nextLine();
 
-        try {
-            File wordListFile = new File("src/lab13q2s6434480323/wordlist.txt");
-            Scanner reader = new Scanner(wordListFile);
+        File wordListFile = new File("src/lab13q2s6434480323/wordlist.txt");
 
+        try ( Scanner reader = new Scanner(wordListFile)) {
             while (reader.hasNextLine()) {
                 wordList.add(reader.nextLine());
             }
@@ -52,12 +51,11 @@ public class main {
             }
 
             System.out.println("Words not contained:");
-            if (wordNotContained.size() > 0) {
-                wordNotContained.forEach((word) -> System.out.println(word + " "));
+            if (!wordNotContained.isEmpty()) {
+                System.out.println(String.join(" ", wordNotContained));
             } else {
                 System.out.println("N/A");
             }
-
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -67,5 +65,5 @@ public class main {
 }
 
 /**
- * test case this is fantastic this is awesome prog
+ * test case this is fantastic this is awesome prog tech
  */
