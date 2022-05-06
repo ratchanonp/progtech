@@ -33,6 +33,7 @@ public class Actor {
 
         board[y + 1][x + 1] = true;
         board[y][x] = false;
+
         x = x + 1;
         y = y + 1;
 
@@ -50,8 +51,10 @@ public class Actor {
 
         board[y + 1][x - 1] = true;
         board[y][x] = false;
+
         x = x - 1;
         y = y + 1;
+
         return true;
     }
 
@@ -66,8 +69,10 @@ public class Actor {
 
         board[y - 1][x + 1] = true;
         board[y][x] = false;
+
         x = x + 1;
         y = y - 1;
+
         return true;
     }
 
@@ -82,8 +87,10 @@ public class Actor {
 
         board[y - 1][x - 1] = true;
         board[y][x] = false;
+
         x = x - 1;
         y = y - 1;
+
         return true;
     }
 
