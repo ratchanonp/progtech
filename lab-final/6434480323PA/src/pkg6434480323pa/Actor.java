@@ -19,7 +19,7 @@ public class Actor {
         this.x = x;
         this.y = y;
 
-        board[x][y] = true;
+        board[y][x] = true;
     }
 
     public boolean moveUpR() {
@@ -27,12 +27,12 @@ public class Actor {
             return false;
         }
 
-        if (board[x + 1][y + 1]) {
+        if (board[y + 1][x + 1]) {
             return false;
         }
 
-        board[x + 1][y + 1] = true;
-        board[x][y] = false;
+        board[y + 1][x + 1] = true;
+        board[y][x] = false;
         x = x + 1;
         y = y + 1;
 
@@ -44,12 +44,12 @@ public class Actor {
             return false;
         }
 
-        if (board[x + 1][y - 1]) {
+        if (board[y + 1][x - 1]) {
             return false;
         }
 
-        board[x + 1][y - 1] = true;
-        board[x][y] = false;
+        board[y + 1][x - 1] = true;
+        board[y][x] = false;
         x = x + 1;
         y = y - 1;
         return true;
@@ -60,12 +60,12 @@ public class Actor {
             return false;
         }
 
-        if (board[x - 1][y + 1]) {
+        if (board[y - 1][x + 1]) {
             return false;
         }
 
-        board[x - 1][y + 1] = true;
-        board[x][y] = false;
+        board[y - 1][x + 1] = true;
+        board[y][x] = false;
         x = x - 1;
         y = y + 1;
         return true;
@@ -76,12 +76,12 @@ public class Actor {
             return false;
         }
 
-        if (board[x - 1][y - 1]) {
+        if (board[y - 1][x - 1]) {
             return false;
         }
 
-        board[x - 1][y - 1] = true;
-        board[x][y] = false;
+        board[y - 1][x - 1] = true;
+        board[y][x] = false;
         x = x - 1;
         y = y - 1;
         return true;
