@@ -40,7 +40,7 @@ public class Actor {
     }
 
     public boolean moveUpL() {
-        if (x == 7 || y == 0) {
+        if (x == 0 || y == 7) {
             return false;
         }
 
@@ -50,13 +50,13 @@ public class Actor {
 
         board[y + 1][x - 1] = true;
         board[y][x] = false;
-        x = x + 1;
-        y = y - 1;
+        x = x - 1;
+        y = y + 1;
         return true;
     }
 
     public boolean moveDnR() {
-        if (x == 0 || y == 7) {
+        if (x == 7 || y == 0) {
             return false;
         }
 
@@ -66,8 +66,8 @@ public class Actor {
 
         board[y - 1][x + 1] = true;
         board[y][x] = false;
-        x = x - 1;
-        y = y + 1;
+        x = x + 1;
+        y = y - 1;
         return true;
     }
 
